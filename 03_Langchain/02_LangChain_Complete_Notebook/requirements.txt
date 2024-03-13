@@ -1,0 +1,10 @@
+langchain
+openai
+huggingface_hub
+langchain_google_genai
+ipykernel
+python-dotenv
+google-search-results
+numexpr
+wikipedia
+pypdf
