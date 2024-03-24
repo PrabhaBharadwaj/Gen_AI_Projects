@@ -4,4 +4,4 @@ sentence-transformers==2.2.2
 pypdf
 flask
 faiss-cpu
--e .
+-e .  #This is to install the setup.py as library and install all which mentioned inside setup.py
