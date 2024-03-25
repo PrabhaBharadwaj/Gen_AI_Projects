@@ -1,0 +1,2 @@
+Download quantized LLM model and save in this model folder.
+While pushing to BB, Gitignore this .bin model file in this folder
