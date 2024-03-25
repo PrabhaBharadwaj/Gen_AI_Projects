@@ -63,7 +63,7 @@ def index():
     return render_template("index.html", **locals())
 
 
-# g Gets user input as question and passes this to chain and Returns the response to html page
+# Gets user input as question and passes this to chain and Returns the response to html page
 @app.route("/chatbot", methods=["GET", "POST"])
 def chatbotResponse():
 

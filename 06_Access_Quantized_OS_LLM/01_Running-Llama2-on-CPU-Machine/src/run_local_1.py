@@ -1,3 +1,5 @@
+# Basic.py file to show Customize Default prompt+instruction prompt while using Quantized LLM
+
 # Import all library
 from langchain import PromptTemplate
 from langchain import LLMChain
@@ -35,4 +37,6 @@ llm = CTransformers(
 LLM_Chain = LLMChain(prompt=prompt, llm=llm)
 
 # Inference with text
-print(LLM_Chain.run("How are you?"))
+print(
+    LLM_Chain.run("How are you?")
+)  # Here text passed will be assigned to ["text"] as input_variable

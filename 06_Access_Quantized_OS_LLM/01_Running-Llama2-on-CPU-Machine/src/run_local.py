@@ -1,3 +1,5 @@
+# Basic.py file to show Default prompt+instruction prompt while using Quantized LLM
+
 # Import all library
 from langchain import PromptTemplate
 from langchain import LLMChain
@@ -37,3 +39,4 @@ LLM_Chain = LLMChain(prompt=prompt, llm=llm)
 # Inference with text
 # print(LLM_Chain.run("How are you?"))
 print(LLM_Chain.run("Harry Potter?"))
+# Here text passed will be assigned to ["text"] as input_variable
