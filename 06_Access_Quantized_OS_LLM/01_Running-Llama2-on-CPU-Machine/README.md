@@ -4,7 +4,24 @@
 - We created **FAISS vector DB** for our pdf file
 - Used Quantized Llama2 model **llama-2-7b-chat.ggmlv3.q4_0.bin** to produce the final output in **Flask webpage**
 
-# ---------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+
+# Files
+
+- **app.py:** Main file uses Flask and creates basic webpage and calls all main actions
+- **src/helper:** Holds all main functions, which will be called inside app.py
+- **init.py** It helps to treat src folder's all files as package/internal library in **setup.py**
+- **setup.py:** It helps to convert src folder's **helper.py** files as package/internal library
+- **requirement.txt:** Holds all required packages and its version
+- **template Folder:** Holds flask **index.html**
+- **static Folder:** Holds flask **jquery.min.js**
+- **SRC/run_local_1.py and run_local_1.py:** Holds initial code before convertig it to modularized code in app.py
+- **data folder:** Holds pdf file
+- **model folder:** Holds downloaded llama2 model, it wont be pushed to BB
+- **Generative_AI_Project.egg-info:** - This is the local package created on helper.py file, it wont be pushed to BB
+- **tempalte.py:** Holds initial foder structure skeleton
+
+# ---------------------------------------------------------------------------
 
 # Steps written in app.py
 
@@ -33,12 +50,12 @@ Split Text into Chunks
 
 - Create **index.html** inside template folder with template info
 - Create **jquery.min.js** in static folder with relevant content
-- Execute flask **@app inside **main****
+- Execute flask **@app inside **main\*\*\*\*
 - This helps to give one approval popup, then it allows us to open local webpage link
   - http://localhost:8080
 - Then we can input our Q to flask , it executes backend model and retrives the O/P(Wait for 2 min)
 
-# ---------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 
 # How to run?
 
