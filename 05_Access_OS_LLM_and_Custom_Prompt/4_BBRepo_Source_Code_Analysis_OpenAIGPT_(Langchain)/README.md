@@ -4,7 +4,7 @@
 - It helps to **understand any of the code**.
 - Here we are building Basic **RAG** end to end project,
 - We created **CHROMA vector DB** for our I/P Repo, It reads all .py file and make as Knowledge base
-- Used OpenAI model **ChatOpenAI() Default gpt 3.5 Turbo** to produce the final output in **Flask webpage**
+- Used OpenAI model **ChatOpenAI() - Default gpt 3.5 Turbo** to produce the final output in **Flask webpage**
 
 ![plot](Flow_diagram.png)
 
