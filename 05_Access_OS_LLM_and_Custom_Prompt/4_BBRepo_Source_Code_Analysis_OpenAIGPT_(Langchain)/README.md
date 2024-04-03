@@ -1,10 +1,12 @@
 # Source-Code-Analysis-using-GenAI
 
-- Here we are apply **embedding on source code(others written python code)** and then we ask Q on that code to understand more about that code.
+- Here we apply **embedding on source code(others written python code)** and then we ask Q on that code to understand more about that code.
 - It helps to **understand any of the code**.
 - Here we are building Basic **RAG** end to end project,
 - We created **CHROMA vector DB** for our I/P Repo, It reads all .py file and make as Knowledge base
 - Used OpenAI model **ChatOpenAI() Default gpt 3.5 Turbo** to produce the final output in **Flask webpage**
+
+![plot](Flow_diagram.png)
 
 # ---------------------------------------------------------------------------
 
