@@ -98,7 +98,7 @@ TELEGRAM_BOT_TOKEN=xxxxxxxxxx:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   python telegram_bot.py
   ```
 
-  ![plot](LLM_enabled_telegram_bot.jpeg)
+  ![plot](images/LLM_enabled_telegram_bot.jpeg)
 
 ### Drive link for other integrations
 
