@@ -10,8 +10,8 @@
 - We can create multiple function, Like Getting ans from LLM /RAG etc for telebot Q
 - This bot has **Memory**, what ever we asked it will **remember** and gives response related to prev Conversation, till we type **/clear** in our Telegram bot
 
-  ![plot](images/Memory_1.png)
-  ![plot](images/Memory_2.png)
+  ![plot](images/Memory_1.JPEG)
+  ![plot](images/Memory_2.JPEG)
 
 - This bot we can deploy to **\*Cloud Platform** and get the respose in specific endpoint
 
@@ -63,8 +63,6 @@ pip install -r requirements.txt
 
      - Now click on url to access the bot
 
-     ![plot](During_bot_run_image.png)
-
      - Make sure you collect the access token and copied to .env file
 
 ### Add in .env
@@ -85,7 +83,7 @@ TELEGRAM_BOT_TOKEN=xxxxxxxxxx:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   ```
 
   ![plot](images/During_bot_run_image.png)
-  ![plot](images/telegram_bot_image.png)
+  ![plot](images/telegram_bot_image.JPEG)
 
 - **StoP Bot** - Press **Control+C**
 
@@ -100,7 +98,7 @@ TELEGRAM_BOT_TOKEN=xxxxxxxxxx:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   python telegram_bot.py
   ```
 
-  ![plot](LLM_enabled_telegram_bot.png)
+  ![plot](LLM_enabled_telegram_bot.JPEG)
 
 ### Drive link for other integrations
 
