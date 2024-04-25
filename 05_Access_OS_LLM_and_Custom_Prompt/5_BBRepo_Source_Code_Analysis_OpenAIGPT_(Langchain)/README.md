@@ -5,6 +5,7 @@
 - Here we are building Basic **RAG** end to end project,
 - We created **CHROMA vector DB** for our I/P Repo, It reads all .py file and make as Knowledge base
 - Used OpenAI model **ChatOpenAI() - Default gpt 3.5 Turbo** to produce the final output in **Flask webpage**
+- Added **Langchain's ConversationSummaryMemory**
 
 ![plot](Flow_diagram.png)
 
@@ -41,7 +42,7 @@
 ## Local Vector DB creation
 
 - Inside **app.py** it executes **store_index.py** which use langchain Loader - **GenericLoader.from_filesystem** to read the all **.py** files in cloned repo
-- Then Split Text into Chunks .Here it wont do normal chunks, it does **context based chunking** , so it holds **function name** as tag for that chunk. For this we used **Langchain's RecursiveCharacterTextSplitter.from_language**
+- Then Split Text into Chunks .Here it wont do normal chunks, it does **context based Context Aware chunking** , so it holds **function name** as tag for that chunk. For this we used **Langchain's RecursiveCharacterTextSplitter.from_language**
 - Use the **OpenAIEmbeddings** Model via Langchain and convert chunk to vector and stores embedding in local db - **Chroma db** inside folder **db**
 
 ## Use ChatOpenAI() from Langchain as LLM model and Build RAG

@@ -62,9 +62,11 @@ def gitRepo():
 
     if request.method == "POST":
         user_input = request.form["question"]  # Here we pass Git repo link
-        repo_ingestion(
-            user_input
-        )  # This git repo link will be passed to repo_ingestion and saved inside repo folder
+
+        # This git repo link will be passed to repo_ingestion and saved inside repo folder
+        repo_ingestion(user_input)
+
+        # Then it executes this vectordb creation script
         os.system("python store_index.py")
 
     return jsonify({"response": str(user_input)})
