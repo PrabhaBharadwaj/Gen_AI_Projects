@@ -8,8 +8,6 @@
 - Used OpenAI model **Gemini Pro Model - ChatGoogleGenerativeAI** to produce the final output in **Streamlit webpage**
 - Added **Langchain Conversation buffer memory**
 
-# ---------------------------------------------------------------------------
-
 ## Yet to explore more
 
 - Apply Chat Memory ( - 1.Langchain Buffermemory - 2. Streamlt app's chatmemory (Keep streamlit as just webpage only) - 3. End application will holds chat and passes to main script as current Q + Chathistory
@@ -19,8 +17,6 @@
 - Add RAG Model Evaluation steps
 - Test is this reads any table info if pdf has any table data
 - Have a control to Switch Multiple LLM Model at the end
-
-# ---------------------------------------------------------------------------
 
 # Files
 
@@ -33,8 +29,6 @@
 - **Generative_AI_Project.egg-info:** - This is the local package created on helper.py file, it wont be pushed to BB
 - **.env:** Holds Gemini API Key, it wont be pushed to BB
 - **tempalte.py:** Holds initial foder structure skeleton
-
-# ---------------------------------------------------------------------------
 
 # Steps written in chatpdf_app.py
 
@@ -55,14 +49,10 @@
 - Used langchain's **load_qa_chain with ConversationBufferMemory** to retrive FAISS db context for User Q with prompt teplate
 - Used **ChatGoogleGenerativeAI(model="gemini-pro") AS LLM** with **load_qa_chain** created langchain's QA chain [RAG]
 
-# ---------------------------------------------------------------------------
-
 ## Streamlit Front End
 
 - 1st need to upload PDF Files and and press **Submit and Process** and ask Q,
 - In backend it creates **FAISS Vector DB and and provides O/P** for user Q
-
-# ---------------------------------------------------------------------------
 
 # How to run?
 
@@ -116,8 +106,6 @@ open up localhost: http://localhost:8080
 ctrl + C
 ```
 
-# ---------------------------------------------------------------------------
-
 ### Techstack Used:
 
 - Python
@@ -126,10 +114,8 @@ ctrl + C
 - Google Gemini Pro - ChatGoogleGenerativeAI
 - FAISS DB Local memory
 
-# ---------------------------------------------------------------------------
-
 ### Streamlit App:
 
-![plot](images/app_page_1.png)
-![plot](images/app_page_2.png)
-![plot](images/app_page_3.png)
+![plot](image/app_page_1.png)
+![plot](image/app_page_2.png)
+![plot](image/app_page_3.png)
