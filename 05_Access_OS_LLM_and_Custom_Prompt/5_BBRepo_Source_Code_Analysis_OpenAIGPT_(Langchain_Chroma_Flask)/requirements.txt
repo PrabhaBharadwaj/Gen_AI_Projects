@@ -1,0 +1,8 @@
+openai==0.28 #Calling OPENAI LLM and embedding model
+tiktoken     #Its req for openai model
+chromadb==0.4.15
+langchain==0.0.249
+flask
+GitPython  # This req to clone Git repo
+python-dotenv
+-e .
