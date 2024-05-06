@@ -4,4 +4,4 @@
 
 - We have stage branch. Always do changes by shifting to stage branch and then commit to stage, Later do pull request to merge to master branch
 
-git checkout stage
+git checkout stage and then do changes and upload to stage and then to main
