@@ -1,0 +1,18 @@
+Here Credential kept inside .env file inside working main directory
+Content inside .env file:
+		Azure_openapi_gpt4_key = '8kDpkyvPUXLN32GpQIxQA6c8WpQYp2XvEqp6RReIoGNDiP'
+
+This .env wont be pushed to BB
+
+Install this in virtual env: pip install python-dotenv
+
+Inside main script call this variable 
+
+	import os
+	from dotenv import load_dotenv
+
+	#To load .env from local
+	load_dotenv()
+
+	# Read OPENAI KEY from .env
+	API_KEY = os.environ.get("azure_openapi_gpt4_key")

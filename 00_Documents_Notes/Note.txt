@@ -1,0 +1,166 @@
+If we have our data in csv, we can use some code by hugging face, that converts data to hugging face dataset format
+
+
+STATIC - EMBEDDING/ENCODING:
+
+One Hot Encoding
+Freq/Count based:
+	BOW
+	TF/IDF
+	N-GRAM
+
+DP Learning based./Prediction based Embedding:
+WORD2VEC(Based on set of features it produce weights to each token. Which holds semantic meaning. 
+	Which gives average weight based on all the sentence)
+	This is static vector for each Token/word. and produces vector based on Overall conext of the whole data
+	Contextual/Dynamic vector was no there in this embedding. So Vector going to be same throught the process
+
+	CBOW
+	SKIP GRAM
+
+Issue of WORD2VEC: 
+	But this holds semantic meaning but holds static info. If Bank as river bank or Financial bank both will have same vector
+To solve this issue Dynamic embedding, self attention/Transformer arrived. Embedding should change based on sentence for same word
+
+Dynamic/CONTEXTUAL EMBEDDING:- Advnavced EMBEDDING:
+	Self attention inside Transformer
+		Which creates embedding Dynamically
+
+
+----------
+In vector creation time/embedding it creates set of features and provides / creates vector based on this feature list. But we cant come to know what are those features
+----------
+Inside huggingface, we get only free models for OPENAI, GOOGLE, META etc. Paid model we need to go to their respective page. We can access such paid models via Langchain. Langchain supports both free and paid model
+----------
+
+MODELS:
+ANN
+CNN
+RNN
+	Gradient vanishing issue for longer sentence and not much symantic meaning for longer sentence
+LSTM
+	Memory retained but More complex than RNN and slowr than RNN , 
+	I/P Data need to be passed sequentially or serialy one after the other in next timestamp. so current timestamp had dependency on prev timestamp
+	it has to do time stamp pased sequetial operation, so it was slow and complex
+GRU
+ENCODER-DECODER 
+	With RNN/LSTM inside Encoder-Decoder. It passes each encoder's RNN/LSTM output passed to 
+	Decoders's RNN/LSTM in sequesnce pattern(Not send to all RNN/LSTM od decoder)
+	
+ENCODER-DECODER - WITH ATTENTION 
+	With RNN/LSTM inside Encoder-Decoder, has NN which passes each encoder's RNN/LSTM O/P to Each decoders input as context text) 
+	Which handles Asynchronous data
+	Issue:
+	More Complex- Computational complexity due to lengthy sentence due to huge NN to pass each Encoder's RNN/LSTM output to decoders ALL RNN/LSTM
+	Here Attention also holds some type of Embedding. In Encoder to Decoder context text passing NN, Last layers weight is going to be embedding for that Word/Token. 
+	Which will be becomes I/P for Decoder
+ 
+SELF ATTENTION(TRANSFORMER)
+	Which dont has any RNN/CNN
+
+---------------------------------------------------------
+SELF ATTENTION(TRANSFORMER)
+	It has concept -  Self attention. Contains Encoder and Decoder
+	It wont have RNN,LSTM, GRU which works on sequence on timestamp. Sequential processing
+	But Transformer has only Neural Network, It wont works on timestamp basis. It does parallel processing.
+	It identifies Embedding info within its same sentence before passing to Decoder. So its parallel processinng , not the seq timestamp based processing
+	Transformer has multimodel capabilty, can do image/video/audio related or text related task
+	both are developed to solve seq to seq problem (like transaltion, Machine transalation, Q&A, Summarization)
+
+
+Encoder decoder with attention:
+
+Here encoder's all RSTM/GRU output/Context vector sends to input of all Decoders input of RSTM/GRU via set of neaural network
+This network called as attention layer
+
+To handle Asynchronas data(i/p and o/p different length) Encoder decoder concept came. 
+Then Encoder decoder with attention came to give more importance to specfic feature(Symantic meaning)
+
+
+Dynamic Contextual embedding/vector, to avoid static embedding in word2vec and encdoder/dercoder and ED with attentiona
+but e/de with attentian had comptation expensive due to long length
+
+
+Transformer dont need word2vec transformer, its does self attention , that way it converts words to vector. 
+This type of embediing is called "General Contextual Embedding"
+
+some task we need to have task specific embedding, that time we use parameter. 
+This parameter called learning parameter
+
+
+
+sg=0 will do cbow in costum embedding model
+
+
+---------------------------------------------------
+Pending Note:
+Finish 16,17 march ALL class
+finish QA 2nd march
+
+Download all doc from 16,17 mar 
+
+close all tab not relevent and read all yet to read tabs
+
+Save Transformer based best audio
+
+Start writeup on LLM till Transformer difference
+
+Then do same for Word2vec etc
+
+Combine all Notes/note/pending doc to clear one
+
+Read Databrick LLM course also
+Read all research paper
+
+Complete homework , Redit Vector DB
+
+zomato food delivery bot
+LCEL expression language
+
+--------------------
+
+Try Hybrid search Mangodb SQL + Embedding
+https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/reciprocal-rank-fusion/
+https://docs.llamaindex.ai/en/stable/examples/vector_stores/MongoDBAtlasVectorSearchRAGOpenAI/
+https://docs.llamaindex.ai/en/stable/examples/vector_stores/ChromaIndexDemo/
+https://esteininger.medium.com/mongodb-and-pinecone-building-real-time-ai-applications-cd8e0482a3c7
+https://towardsdatascience.com/improving-retrieval-performance-in-rag-pipelines-with-hybrid-search-c75203c2f2f5
+https://python.langchain.com/docs/integrations/retrievers/weaviate-hybrid/
+
+https://towardsdatascience.com/the-untold-side-of-rag-addressing-its-challenges-in-domain-specific-searches-808956e3ecc8
+
+
+Try Custom EMbedding:
+https://docs.llamaindex.ai/en/stable/examples/embeddings/custom_embeddings/
+
+Chainofthoughts
+Multiqueryretruver??
+agents for each doc??in llamaindex
+ReAct framework for LLM Agents.
+
+--------------------
+Videos to finish:
+
+https://www.youtube.com/@krishnaik06/playlists
+https://www.youtube.com/playlist?list=PLZoTAELRMXVNbDmGZlcgCA3a8mRQp5axb
+https://www.youtube.com/watch?v=1ICRLYtkmNU&list=PLZoTAELRMXVNbDmGZlcgCA3a8mRQp5axb&index=7
+
+https://medium.com/@chatdocai/revolutionizing-rag-with-enhanced-pdf-structure-recognition-22227af87442
+https://github.com/PrabhaBharadwaj/Gen_AI_Projects/tree/main/08_Project
+
+---------------------------------------------------------------------------------------------------------
+
+[9:45 pm, 13/02/2024] Prabha: Lora low rank Adaption : It avoids traditional fine tuning and helps to fine tune existing pretrained model. Without effecting its original weight and adds new weight which is of lesser dimention
+[10:29 pm, 29/02/2024] Prabha: creats context rich vector by Q.K vector and which K is contextualy impacting that word. then corewsponding V will be multiplied to that final vectoe
+[6:09 pm, 12/03/2024] Prabha: pip openai  will install openai. then we can. this openai package via Langchain framework. Same goes for huggingfacehub. we do pip instal hugging facehub and then we call via langchain framework
+[6:11 pm, 12/03/2024] Prabha: We can set secrete in 3 way. 1. colab key 2. .env file in local. 3. in sytem search env varibale and set there this key with value and then call via import os and os.key name
+[6:12 pm, 12/03/2024] Prabha: in colab once we define this secrete as env variable. the. no need to ecplicitly mention it inside llm model invoking step. it automatically read from env. but we should set as env variable with same standard name of that parameter specific openai or huggingface hub invoking module
+[6:14 pm, 12/03/2024] Prabha: we cant to do old ml model like regression classidication etc in LLM. it does mainly generation task like summarization, QA, code gene, NER, translation etc
+[6:15 pm, 12/03/2024] Prabha: in openai() it calls default Openai gpt 3.5 turbo model. if we want other model, then we need to mention inside openai() model invoke time
+[6:18 pm, 12/03/2024] Prabha: paid llm model we cantdownload. we can fine tune with our data, but we need to save in their server only.Not allowed download after fine tune. But open source free model we can download and fine tune and after fine tune we can save in our space also
+[6:21 pm, 12/03/2024] Prabha: https://github.com/krishnaik06/Roadmap-To-Learn-Generative-AI-In-2024
+
+
+----------------------------------------
+Try Neu4j Graph cyper way RAG:
+https://neo4j.com/developer-blog/rag-cypher-vector-templates-langchain-agent/

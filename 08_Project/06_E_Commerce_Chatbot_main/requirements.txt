@@ -1,0 +1,15 @@
+langchain-astradb
+langchain 
+# langchain-openai
+datasets
+pypdf
+python-dotenv
+flask
+
+#If we use google gemin embedding
+google-generativeai
+langchain-community
+langchain-google-genai
+
+
+-e .

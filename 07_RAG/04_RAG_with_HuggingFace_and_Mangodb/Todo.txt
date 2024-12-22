@@ -1,0 +1,7 @@
+Try Hybrid search by mangodb and vector index Pinecone
+
+#https://python.langchain.com/docs/integrations/retrievers/weaviate-hybrid/
+
+
+https://towardsdatascience.com/improving-retrieval-performance-in-rag-pipelines-with-hybrid-search-c75203c2f2f5
+https://esteininger.medium.com/mongodb-and-pinecone-building-real-time-ai-applications-cd8e0482a3c7
