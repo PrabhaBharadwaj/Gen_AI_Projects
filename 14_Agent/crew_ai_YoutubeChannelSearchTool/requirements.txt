@@ -1,0 +1,8 @@
+crewai
+crewai_tools
+load_dotenv
+langchain
+langchain-openai
+langchain-google-genai==1.0.4
+langchain-huggingface
+python-dotenv

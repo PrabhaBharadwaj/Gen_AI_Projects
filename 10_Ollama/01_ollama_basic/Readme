@@ -1,0 +1,155 @@
+# Steps to Follow
+
+## Download Ollama from https://ollama.com/ and install in local system
+
+- Then type **ollama** in cmd prompt, it should recognize this keyword and provide set of command
+
+# Step to execute in cmd
+
+- Then create **modelfile.md** in ollama local folder and mention Model name, model behaviour, parameter etc. In ollama modelfile we can do finetune also
+
+  - Internally its uses LLM model mentioned in **modelfile** and uses system behaviour and behaves like chatbot - **AIKING**
+
+- Execute modelfile in cmd. This creates ollama local agent- AIKING which we mentioned in modelfile.cmd
+
+  - cd "D:\Prabha\Data Science\Prabha-DS\Gen_AI\Ineuron\Gen_AI_Course\Project\github\Gen_AI_Projects\10_Ollama\01_ollama_basic"
+
+```
+  ollama create AIKING -f modelfile
+```
+
+- Once above statement successful then type below code, this behaves as chatbot and we can ask Q
+
+```
+  ollama run AIKING
+```
+
+- This way we are running our local docker.
+
+- Type below statement to comeout of cmd chatbot
+
+- Images of run in cmd
+  ![plot](images/cmd_run.png)
+  ![plot](images/Docker_set_in_cmd.png)
+
+##----------------------------------------###########
+
+# Step to execute in UI
+
+## Download Dockerd from https://www.docker.com/products/docker-desktop/ and install in local system
+
+    - https://docs.docker.com/desktop/install/windows-install/
+
+- Then open Docker desktop in local system(Activate the docker engine)
+- Then open cmd. On top arrow mark select WindowsPowershell (which is )
+
+## Open WebUI
+
+- only for webui we need docker
+- Open WebUI is an extensible, feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI-compatible APIs. For more information, be sure to check out our Open WebUI Documentation.
+
+- Copy below statement from ollama github https://github.com/open-webui/open-webui to execute in UI
+
+```
+   docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+```
+
+- Docker creats container in port 8080(its serverless, runs in container), then it mapped to port 3000 of local system. we can map to other number also (3000 to other no)
+- When we run above code in powershell, it downloads "ghcr.io/open-webui/open-webui:main" image from docker image hub. here "ghcr.io" is repo name in github, it downloads open-webui code.
+- This downloaded image - ghcr.io/open-webui we can see in dockerdesktop
+- Then type below localhost with port no 3000 to open webUI(In above script we have given 3000, so its called port 3000 below). This will opens webUI with email and password for login. 1st time do signup
+  - http://localhost:3000
+- Then **webUI** will be visible in above local host. It looks like chatgpt window, we can use llama model and do the chat querying. It runs in my local docker.
+- Here it uses previously created **AIKING:latest** model for user Q
+
+- Related images:
+
+![plot](images/open_webui_dockerimage.png)
+
+![plot](images/openwebui_1.png)
+
+![plot](images/openwebui_2.png)
+
+![plot](images/openwebui_3.png)
+
+##----------------------------------------###########
+
+# How to call Ollama model in loacl (test.ipynb)
+
+- Here sample code given, there default base URL - https://localhost:11434 used. which we can see in https://github.com/ollama/ollama
+
+##----------------------------------------###########
+
+# How to call Ollama model in loacl (test.py)
+
+- Use ollama URL(url = "http://localhost:11434/api/generate") and call specific model(llama2)
+- Then create gradio. Gradio is to create instant UI, same like streamlit
+- Create gradio interface/UI and Lauch step inside test.py.
+- [We no need to run docker, we can clse if its running, only for webui we need docker]
+- Then execute this line line in cmd
+
+```
+  python test.py
+```
+
+- Now new UI page will be displayed in cmd, copy and open in chrome
+
+```
+  - Running on local URL: http://127.0.0.1:7860
+```
+
+- Type your Q in front end. but its giving irrelavant ans :D
+- There will be flagged folder created and inside that log file will be created and ans will be saved.
+
+![plot](images/gradio_ui_with_ollama.png)
+
+- **Got error: Error {"error":"model \"llama2\" not found**, try pulling it first"
+- **Way 1**
+  - To resolve this in cmd powershell run "ollama run llama2" so it download and install ollama in local
+- **Way 2**
+  - In cmd type below this command to see llama model name, it gives actual model list with proper name. Keep that name in **modelfile** Ex: llama2:latest
+  ```
+  ollama list
+  ```
+
+##----------------------------------------###########
+
+# Ollama main commands:
+
+- Pull any type of model
+
+```
+ollama pull <model_name>
+```
+
+- run any type of model
+
+```
+ollama run <model_name>
+```
+
+- Create custom model/agent in ollama
+
+```
+ollama create <ANy Agent name> -f <model_file>
+ollama create AIKING -f modelfile
+```
+
+- Run custom model/agent in ollama
+
+```
+ollama run <ANy Agent name>
+ollama run AIKING
+```
+
+- Official repo of ollama
+
+```
+https://github.com/ollama/ollama
+```
+
+- Official webui repo of ollama
+
+```
+https://github.com/open-webui/open-webui
+```

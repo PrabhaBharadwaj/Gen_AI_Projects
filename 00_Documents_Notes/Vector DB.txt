@@ -1,0 +1,50 @@
+Vector DB:
+
+Chroma DB, Pinecone, Weaviate, FAISS(Meta), Redis, now mangodb added vector db/search
+Chrome DB(Local_cloud) , FAISS are open source local db, we can download to local and try. 
+
+Weaiate, Pinecone are cloud based db, we need to take subscription, but it provides initial free credits, we can create only 1 cluster. if we dont want to save our private data there, then we should use Chrome db/FAISS
+
+
+CHROMA/PINECONE-CLIENT Db pip installed, Then called via langchain's vectore_stores
+
+Here we used openai's embedding
+
+Chunking/Chunk_size: In document/datset we will have more no of tokens, but word embedding LLM models will have token size /token_limitation like 4k Tokens etc, So to accomodate to that size, we split our data as chunks
+
+Chunk_overlap =50: It takes 50 token behind from previous chunk while creating next chunk
+
+Below steps followed:
+- 1st download some document
+- Then split that into chunks
+- Then apply openai embedding or hugging face embedding model or some other embedding
+
+- Create persist_directory to create schema/db in local
+- Then use Chroma/vectore db library and pass document which conveted to chunks and pass embedding model name and persist directory --> This converts chunk to vectors/embedding, which will be saved inside db filder
+- Then do Vectordb.persist to save this embedding in local disk
+- Then we need to load this vector_db which we just now created by mentioning persist_director/vector_db  and embedding model name
+- Then use as_retriever to read vector db and do  symantic search on this 
+- Then this symantic/similarity search will give 4 relavant answers, that along with user Q we will feed to LLM to provide meaningfull response on that Q. We can use langchain's chain operation - RetrivalQA fr this
+- We can set this # of relevant answer by setting search_kwargs ={k:2}
+by using Chroma library
+
+- Here VectorDB does similarity search based on user Q, but LLM just structure the VectorDB response and gives as output. LLM wont do anything else. Its also called RAG 
+
+----------------
+- Pinecone is cloud based, so we need to define/create index and its diemnsions. If our embedding creates vector of 384 diemnsions then we need to set diemnsions =384, while creating pinecone index
+PINECONE_API_ENV = 'gcp-starter'
+
+- Set API key and Env key, then .init initialize the pinecone by providing index
+
+- Whenever connecting to pinecone Via  API key and env key, import direct pinecone library and use
+- Whenever importing embedding and doing db registry, that time use pinecone from langchain.vectorstores import Pinecone
+ to pinecone Via  API key and env key, use direct pinecone library
+
+- Then use pinecone library and pass document which conveted to chunks and pass embedding model name and index --> This converts chunk to vectors/embedding, which will be saved inside index in pinecone cloud
+
+- Each chunks creates as 1 vector
+
+- Then we need to load this vector_db which we just now created by mentioning pinecone index  and embedding model name
+
+- Then this symantic/similarity search will be done on this loaded vector_db. It give 4 relavant answers, that along with user Q we will feed to LLM to provide meaningfull response on that Q. We can use langchain's chain operation - RetrivalQA fr this
+- We can set this # of relevant answer by setting search_kwargs ={k:2}

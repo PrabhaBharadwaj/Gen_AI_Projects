@@ -1,0 +1,19 @@
+conda init bash
+
+Close all terminal, then type
+
+conda activate "D:\Prabha\Data Science\Prabha-DS\Gen_AI\Ineuron\Gen_AI_Course\Notes\Project\venv"
+
+
+python=3.11:
+conda activate "D:\Prabha\Data Science\Prabha-DS\Gen_AI\Ineuron\Gen_AI_Course\Notes\Project\venv_new"
+
+-----------------------
+
+conda init bash
+
+conda info --envs
+
+Close all terminal, then type
+
+conda activate "D:\Prabha\Data Science\Prabha-DS\Gen_AI\Ineuron\Gen_AI_Course\Project\azure_opnai_env_310"
