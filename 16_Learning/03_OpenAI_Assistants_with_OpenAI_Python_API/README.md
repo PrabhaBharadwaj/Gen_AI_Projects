@@ -26,7 +26,14 @@
 
 - **Tools Deep Dive:** Get a comprehensive understanding of tools like Code Interpreter, Knowledge Retrieval, and Function Calling. Learn about their costs, capabilities, and how they enhance the functionality of AI assistants.
 
+-**Extra: Vectore store:** Created vector store and attached files to it
+
 - **Course completion**
 
   - https://prudentialservices.udemy.com/certificate/UC-2ddf5268-0065-4a65-95c5-f1870eb349c3/
   - https://udemy-certificate.s3.amazonaws.com/pdf/UC-2ddf5268-0065-4a65-95c5-f1870eb349c3.pdf
+
+### Best Links:
+
+- https://platform.openai.com/docs/assistants/deep-dive
+- https://platform.openai.com/docs/assistants/quickstart
