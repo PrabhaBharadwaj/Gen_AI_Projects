@@ -5,13 +5,17 @@
 - 1. llama 3.2 Vision
 - 2. NVLM 1.0
 - 3. Molmo
-- 4. Qwen2-VL(support chinese as well)
-- 5. Pixtral (From Mixtra)
-- 6. Anthropic Claude 3.5 Sonnet
-- 7. LLlava
-- 8. NexTGPT ( dev by SG)
-- 9. Meta Imagebind
-- 10. Got OCR : https://huggingface.co/stepfun-ai/GOT-OCR2_0
+- 4. Phi-4
+- 5. Qwen2-VL(support chinese as well)- Alibaba model
+- 6. Pixtral (From Mixtra)
+- 7. Anthropic Claude 3.5 Sonnet
+- 8. LLlava
+- 9. Mini-CPM-V-2.6
+- 10. NexTGPT ( dev by SG)
+- 11. Meta Imagebind
+- 12. Got OCR : https://huggingface.co/stepfun-ai/GOT-OCR2_0
+- 13. Deepseek - Janus Pro
+- 14. Colpali
 
 ## ClosedSource :
 
