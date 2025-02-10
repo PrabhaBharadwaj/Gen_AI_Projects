@@ -1,0 +1,8 @@
+boxing meaning bounding boxes?
+I haven't tried it with this model, but I tried it using the Moondream model with red bounding boxes and it was able to workout what was inside. been working on getting it to give me BB coordinates for things.
+
+
+Maybe i would be useful to save the generated description in the image file itself, for example in exif/iptc description field if image file supports it.
+
+
+I have a loop where I generate a response, then have another prompt ask if this response is correct for the image. If no, try again. I like the big llava for the first writing and a smaller llava or moondream for the checking.  It can take a couple minutes for the multiple attempts,  but that's ok.
