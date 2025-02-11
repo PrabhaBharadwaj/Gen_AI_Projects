@@ -15,6 +15,9 @@
   - https://dev.to/rutamstwt/langchain-data-protection-op9
   - https://python.langchain.com/v0.2/api_reference/experimental/data_anonymizer/langchain_experimental.data_anonymizer.presidio.PresidioReversibleAnonymizer.html
 
+- **Databaricks**
+  - https://github.com/andyweaves/databricks-notebooks/tree/main/notebooks/privacy
+  - 
 - Presidio can be a good start for the POC. However, it has limitations.
 
 Presidio contains predefined recognizers for various PII entities, including:
